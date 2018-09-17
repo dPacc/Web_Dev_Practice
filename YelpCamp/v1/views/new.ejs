@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<div class="container">
+
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Create a New Campground</h1>
+      <p>Enter the name and url of the campground you would like to add</p>
+    </div>
+  </header>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <form action="/campgrounds" method="POST">
+        <div>
+          <input type="text" name="name" placeholder="Enter Name">
+          <input type="text" name="image" placeholder="Image Url">
+          <a class="btn btn-primary btn-large">Add</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <a href="/campgrounds">Go Back</a>
+
+<% include partials/footer %>
+</div>
