@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<form action="/blogs" method="POST">
+    <div class="field">
+        <label>Enter Title</label>
+        <textarea name="blog[title]" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label>Image URL</label>
+        <textarea name="blog[image]" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label>Enter the content</label>
+        <textarea name="blog[body]" rows="8"></textarea>
+    </div>
+    <input class="ui button" type="submit">
+</form>
+
+<% include partials/footer %>

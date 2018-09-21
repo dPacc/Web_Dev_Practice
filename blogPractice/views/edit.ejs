@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<form action="/blogs/<%= editBlog._id %>?_method=PUT" method="POST">
+  <div>
+      <%= editBlog.title %>
+  </div>
+  <img src="<%= editBlog.image %>">
+  <p><%= editBlog.body %></p>
+  <input class="ui button" type="submit">
+</form>
+
+<% include partials/footer %>

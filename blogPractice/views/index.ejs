@@ -1,0 +1,10 @@
+<% include partials/header %>
+
+<%foundBlog.forEach(function(bg) {%>
+  <img src="<%= bg.image %>">
+  <a href="/blogs/<%=bg._id%>"><%=bg.title%></a>
+  <span><%=bg.created.toDateString()%></span>
+  <p><%=bg.body.substring(0, 100)%>...</p>
+<%});%>
+
+<% include partials/footer %>
