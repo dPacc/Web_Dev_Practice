@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+<h1><%=showCamp.name%></h1>
+
+<img src="<%= showCamp.image %>">
+
+<p><%=showCamp.description%></p>
+
+<% showCamp.comments.forEach(function(comment) { %>
+  <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
+<% }); %>
+
+<p>
+    <a class="btn btn-success btn-md" href = "/campgrounds/<%=showCamp._id%>/comments/new"> Add a new comment </a>
+</p>
+
+<!-- <a class="ui orange basic button" href="/campgrounds/<%= showCamp._id %>/edit">Edit</a>
+<form id="delete" action="/campgrounds/<%=showCamp._id%>?_method=DELETE" method="POST">
+    <button class="ui red basic button">Delete</button>
+</form> -->
+
+<% include ../partials/footer %>
